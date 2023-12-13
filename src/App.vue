@@ -25,21 +25,25 @@ export default {
                     link: {text: 'Dashboard', url: 'index.html'},
                     pageTitle: 'Dashboard',
                     pageIcon: 'dashboardIconVector.svg',
+                    pageComponent: 'DashboardComp.vue',
                 },
                 {
                     link: {text: 'Optælling', url: 'count.html'},
                     pageTitle: 'Optælling',
                     pageIcon: 'amountIconVector.svg',
+                    pageComponent: '',
                 },
                 {
                     link: {text: 'Indeklima', url: 'climate.html'},
                     pageTitle: 'Indeklima',
                     pageIcon: 'climateIconVector.svg',
+                    pageComponent: '',
                 },
                 {
                     link: {text: 'Advarsler', url: 'warnings.html'},
                     pageTitle: 'Asvarsler',
                     pageIcon: 'warningIconVector.svg',
+                    pageComponent: '',
                 }
             ]
         };

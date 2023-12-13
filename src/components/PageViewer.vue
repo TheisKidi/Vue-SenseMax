@@ -5,7 +5,6 @@
         <h1 class="page-title">{{ page.pageTitle }}</h1>
         </div>
     </div>
-
 </template>
 
 <script>
