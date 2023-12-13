@@ -10,7 +10,7 @@
       </div>
       <div class="warning-box-content-bot">
         <p>Se tidligere advarsler</p>
-        <img src="../media/amountIconVector.svg" />
+        <img src="../media/arrowRightVector 1.svg" />
       </div>
     </div>
   </div>
@@ -42,6 +42,23 @@
   align-items: center;
   justify-content: start;
   gap: 10px;
+}
+
+.warning-box-content-mid{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 3rem;
+  padding-top: 30px;
+  color: #1d1a22;
+  font-weight: 400;
+}
+
+.warning-box-content-bot{
+  font-size: 1.18rem;
+  color: #77767a;
+  font-weight: 500;
+  margin-top: 70px;
 }
 
 </style>
