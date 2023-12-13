@@ -9,11 +9,13 @@
 
 .menu-container {
     max-width: 350px;
+    min-width: 300px;
     height: 98vh;
     text-align: center;
     border-radius: 25px;
     box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.10);
     margin: 15px auto 15px 15px;
+    position: fixed;
 }
 
 .logo-container {
