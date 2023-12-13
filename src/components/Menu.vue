@@ -36,3 +36,117 @@ export default {
   props: ['pages', 'activePage', 'menuLinkClick']
 };
 </script>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+/* CONTAINERS */
+
+.menu-container {
+    max-width: 350px;
+    min-width: 300px;
+    height: 98vh;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.10);
+    margin: 15px auto 15px 15px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.logo-container {
+    padding-top: 55px;
+}
+
+.warnings-container {
+    padding-top: 2vh;
+}
+
+.menu-items-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+/* CONTENT */
+.logo-content {
+    height: 40px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin: 2vh auto;
+}
+  
+/* FONTS */
+p.profile-welcome-content {
+    color: #77767A;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+p.profile-name-content {
+    color: #1D1A22;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+p.warnings-content {
+    color: #1D1A22;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p.warnings-desc {
+    color: #77767A;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+a.menu-item-link {
+    text-decoration: none;
+    color: #77767A;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.menu-item-link.active {
+    color:#1D1A22;
+}
+
+/* MEDIA */
+img.page-icon {
+    height: 35px;
+}
+
+.circle {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-image: url('https://i0.wp.com/lacarteleramx.com/wp-content/uploads/2022/08/1a57b7e3-david-bowie-estrella-paseo-de-la-fama-musica-londres-lacarteleramx.jpg?resize=750%2C450&ssl=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 3vh auto 2vh auto;
+}
+
+</style>
