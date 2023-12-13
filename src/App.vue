@@ -1,5 +1,6 @@
 <template>
-    <PageViewer v-if="pages.length > 0" :page="pages[activePage]" :tickets="tickets"></PageViewer>
+    <PageViewer v-if="pages.length > 0" :page="pages[activePage]" :tickets="tickets"
+        :convertAreaNameToString="convertAreaNameToString"></PageViewer>
     <Menu :pages="pages" :active-page="activePage" :menu-link-click="(index) => activePage = index"></Menu>
 </template>
 
@@ -26,6 +27,7 @@ export default {
             pages: [],
             tickets: [],
             singleTicket: null,
+            singleArtwork: null,
         };
     },
 
@@ -56,6 +58,14 @@ export default {
                 alert(ex.message);
             }
         },
+        async getArtworksByTicket(num) {
+            try {
+                const response = await axios.get(URL + "artworks" + "/" + num)
+                this.singleArtwork = await response.data;
+            } catch (ex) {
+                alert(ex.message)
+            }
+        }
     }
 };
 </script>

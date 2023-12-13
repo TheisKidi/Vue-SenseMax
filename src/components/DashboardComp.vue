@@ -2,30 +2,29 @@
   <div class="dashboard-container">
     <WarningBox :tickets="tickets"></WarningBox>
     <WeeklyGraph></WeeklyGraph>
-    <CriticalAreas :tickets="tickets"></CriticalAreas>
+    <CriticalAreas :tickets="tickets" :convertAreaNameToString="convertAreaNameToString"></CriticalAreas>
     <Schedule></Schedule>
   </div>
-
-
 </template>
 
 <script>
-  import WarningBox from './WarningBox.vue';
-  import CriticalAreas from './CriticalAreas.vue';
-  import Schedule from './Schedule.vue';
-  import WeeklyGraph from './WeeklyGraph.vue';
+import WarningBox from './dashboard-components/WarningBox.vue';
+import CriticalAreas from './dashboard-components/CriticalAreas.vue';
+import Schedule from './dashboard-components/Schedule.vue';
+import WeeklyGraph from './dashboard-components/WeeklyGraph.vue';
 
-  export default {
-    components: {
-      WarningBox,
-      CriticalAreas,
-      Schedule,
-      WeeklyGraph
-    },
-    props: {
-      tickets: Array,
-    }
+export default {
+  components: {
+    WarningBox,
+    CriticalAreas,
+    Schedule,
+    WeeklyGraph
+  },
+  props: {
+    tickets: Array,
+    convertAreaNameToString: Function
   }
+}
 
 </script>
 

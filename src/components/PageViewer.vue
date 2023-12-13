@@ -2,10 +2,10 @@
     <div class="banner-container"></div>
     <div class="page-container">
         <div class="page-title-container">
-        <h1 class="page-title">{{ page.pageTitle }}</h1>
-        <div v-if="page.pageTitle == 'Dashboard'">
-            <DashboardComp :tickets="tickets"></DashboardComp>
-        </div>
+            <h1 class="page-title">{{ page.pageTitle }}</h1>
+            <div v-if="page.pageTitle == 'Dashboard'">
+                <DashboardComp :tickets="tickets" :convertAreaNameToString="convertAreaNameToString"></DashboardComp>
+            </div>
         </div>
     </div>
 </template>
@@ -26,6 +26,7 @@ export default {
         },
         tickets: {
             type: Array,
+            convertAreaNameToString: Function
         },
     },
 
@@ -40,21 +41,23 @@ export default {
 }
 
 .banner-container {
-  background-image: url("../media/banner.png");
-  background-color: rgba(75, 31, 31, 0.4);
-  background-blend-mode: multiply;
-  background-size: cover;
-  height: 15vh;
-  z-index: -1; /* Change this line */
-  position: relative; /* Add this line */
+    background-image: url("../media/banner.png");
+    background-color: rgba(75, 31, 31, 0.4);
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 15vh;
+    z-index: -1;
+    /* Change this line */
+    position: relative;
+    /* Add this line */
 }
 
 .page-container {
     width: 78vw;
     margin-left: auto;
-    position: relative; /* Add this line */
-    z-index: 2; /* Increase z-index */
+    position: relative;
+    /* Add this line */
+    z-index: 2;
+    /* Increase z-index */
 }
-
-
 </style>

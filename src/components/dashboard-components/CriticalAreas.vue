@@ -8,14 +8,14 @@
             <a href="#">
                 <div class="ticket-container">
                     <div class="ticket-area-container">
-                        <img class="ticket-area-content" src="../media/amountIconVector.svg">
+                        <img class="ticket-area-content" src="../../media/amountIconVector.svg">
                     </div>
                     <div class="ticket-content">
-                        <h4 class="h4-subtitle">{{ ticket.ticketArea }}</h4>
-                        <h5 class="h5-text">{{ ticket.artworkInvolved }}</h5>
+                        <h4 class="h4-subtitle">{{ convertAreaNameToString(ticket.ticketArea) }}</h4>
+                        <h5 class="h5-text">{{ getartwor }}</h5>
                     </div>
                     <div class="arrow-container">
-                        <img class="arrow-content" src="../media/arrowButton.png">
+                        <img class="arrow-content" src="../../media/arrowButton.png">
                     </div>
                 </div>
             </a>
@@ -23,9 +23,32 @@
     </div>
 </template>
 
-<style>
-/* FONT STYLING */
 
+<script>
+import { convertAreaNameToString, fetchArtwork } from '@/utils/areaUtils'
+
+const URL = "https://sensemaxrest.azurewebsites.net/api";
+
+export default {
+    data() {
+        return {
+            artworks: {} // Use an object to store artworks keyed by artworkNum
+        }
+    },
+    props: {
+        tickets: Array,
+    },
+    methods: {
+        convertAreaNameToString,
+        fetchArtwork,
+    }
+}
+
+
+</script>
+
+
+<style>
 h2.h2-ticket {
     width: 85%;
 }
@@ -87,14 +110,4 @@ h2.h2-ticket {
     max-width: 100%;
     max-height: 100%;
 }
-
 </style>
-
-<script>
-export default {
-  props: {
-    tickets: Array,
-  }
-}
-
-</script>
