@@ -17,7 +17,7 @@ export default {
 
     created() {
         this.getPages();
-        this.GetAllTickets();
+        this.getAllTickets();
     },
 
     data() {
@@ -25,6 +25,7 @@ export default {
             activePage: 0,
             pages: [],
             tickets: [],
+            singleTicket: null,
         };
     },
 
@@ -44,9 +45,16 @@ export default {
                 alert(error.message)
             }
         },
-        async GetAllTickets() {
+        async getAllTickets() {
             this.helperGetAndShow(URL + "ticket");
-            console.log(this.tickets)
+        },
+        async getTicketById(id) {
+            try {
+                const response = await axios.get(URL + "ticket" + "/" + id);
+                this.singleTicket = await response.data;
+            } catch (ex) {
+                alert(ex.message);
+            }
         },
     }
 };

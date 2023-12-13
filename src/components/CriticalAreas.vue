@@ -4,20 +4,22 @@
             <h2 class="subtitle h2-ticket">Kritiske områder</h2>
             <h3 class="subtitle-text h3-ticket">Vis alle</h3>
         </div>
-        <a v-for="(ticket, index) in tickets" href="#">
-            <div class="ticket-container">
-                <div class="ticket-area-container">
-                    <img class="ticket-area-content" src="../media/amountIconVector.svg">
+        <div v-if="(tickets.length)" v-for="(ticket, index) in tickets">
+            <a href="#">
+                <div class="ticket-container">
+                    <div class="ticket-area-container">
+                        <img class="ticket-area-content" src="../media/amountIconVector.svg">
+                    </div>
+                    <div class="ticket-content">
+                        <h4 class="h4-subtitle">{{ ticket.ticketArea }}</h4>
+                        <h5 class="h5-text">{{ ticket.artworkInvolved }}</h5>
+                    </div>
+                    <div class="arrow-container">
+                        <img class="arrow-content" src="../media/arrowButton.png">
+                    </div>
                 </div>
-                <div class="ticket-content">
-                    <h4 class="h4-subtitle">Udstillings trængsel</h4>
-                    <h5 class="h5-text">{{ ticket.ticketId }}</h5>
-                </div>
-                <div class="arrow-container">
-                    <img class="arrow-content" src="../media/arrowButton.png">
-                </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -44,6 +46,7 @@ h2.h2-ticket {
 .ticket-container {
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .ticket-area-container {
@@ -90,10 +93,8 @@ h2.h2-ticket {
 <script>
 export default {
   props: {
-    tickets: Array
+    tickets: Array,
   }
 }
-
-console.log(tickets)
 
 </script>

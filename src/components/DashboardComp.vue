@@ -2,7 +2,7 @@
   <div class="dashboard-container">
     <WarningBox :tickets="tickets"></WarningBox>
     <WeeklyGraph></WeeklyGraph>
-    <CriticalAreas></CriticalAreas>
+    <CriticalAreas :tickets="tickets"></CriticalAreas>
     <Schedule></Schedule>
   </div>
 
@@ -23,7 +23,7 @@
       WeeklyGraph
     },
     props: {
-      tickets: Array
+      tickets: Array,
     }
   }
 

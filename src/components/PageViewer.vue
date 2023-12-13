@@ -13,7 +13,6 @@
 <script>
 import DashboardComp from './DashboardComp.vue';
 
-
 export default {
     props: {
         page: {
@@ -27,10 +26,10 @@ export default {
         },
         tickets: {
             type: Array,
-        }
+        },
     },
 
-    components: { DashboardComp, DashboardComp }
+    components: { DashboardComp }
 }
 </script>
 
