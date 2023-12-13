@@ -20,3 +20,30 @@
         </a>
     </div>
 </template>
+
+<style>
+/* FONT STYLING */
+.critical-title {
+    color: #1D1A22;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 75%;
+}
+
+.critical-text {
+    color: #77767A;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* CONTAINER STYLE */
+.critical-title-container {
+    display: flex;
+}
+</style>
