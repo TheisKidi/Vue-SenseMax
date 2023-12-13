@@ -13,6 +13,9 @@
                     <h2 class="critical-title">Udstillings trængsel</h2>
                     <h4 class="ticket-text">Melchior Lock</h4>
                 </div>
+                <div class="arrow-container">
+                    <img class="arrow-content" src="../media/arrowButton.png">
+                </div>
             </div>
         </a>
     </div>
