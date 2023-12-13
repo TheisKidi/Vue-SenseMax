@@ -52,7 +52,7 @@ export default {
     margin: 15px auto 15px 15px;
     position: absolute;
     top: 0;
-    z-index: 3; /* Increase z-index to overlap banner */
+    background-color: #FFF;
 }
 
 .logo-container {
