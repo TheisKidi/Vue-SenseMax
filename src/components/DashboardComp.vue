@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <WarningBox></WarningBox>
+    <WarningBox :tickets="tickets"></WarningBox>
     <WeeklyGraph></WeeklyGraph>
     <CriticalAreas></CriticalAreas>
     <Schedule></Schedule>
@@ -22,6 +22,9 @@
       Schedule,
       WeeklyGraph
     },
+    props: {
+      tickets: Array
+    }
   }
 
 </script>

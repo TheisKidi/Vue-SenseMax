@@ -4,7 +4,7 @@
         <div class="page-title-container">
         <h1 class="page-title">{{ page.pageTitle }}</h1>
         <div v-if="page.pageTitle == 'Dashboard'">
-            <DashboardComp/>
+            <DashboardComp :tickets="tickets"></DashboardComp>
         </div>
         </div>
     </div>
@@ -24,8 +24,12 @@ export default {
                     pageIcon: ''
                 };
             }
+        },
+        tickets: {
+            type: Array,
         }
     },
+
     components: { DashboardComp, DashboardComp }
 }
 </script>
@@ -53,12 +57,5 @@ export default {
     z-index: 2; /* Increase z-index */
 }
 
-/* FONT STYLES */
-h1.page-title {
-    color: #1D1A22;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+
 </style>

@@ -3,10 +3,12 @@
     <div class="warning-box-content">
       <div class="warning-box-content-top">
         <img src="../media/warningIconVector.svg" />
-        <h3 class="subtitle-text">Antal advarsler i dag</h3>
+        <h3 class="subtitle-text">
+          Antal advarsler i dag
+        </h3>
       </div>
       <div class="warning-box-content-mid">
-        <p> advarsler</p>
+        <p>{{ tickets.length }} advarsler</p>
       </div>
       <div class="warning-box-content-bot">
         <p>Se tidligere advarsler</p>
@@ -62,3 +64,12 @@
 }
 
 </style>
+
+<script>
+export default {
+  props: {
+    tickets: Array
+  }
+}
+
+</script>
