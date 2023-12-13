@@ -1,5 +1,5 @@
 <template>
-    <nav class="menu-container">
+    <div class="menu-content-container">
         <div class="menu-content">
             <div class="logo-container"><img class="logo-content" src="../media/logoYellowGold.svg"></div>
         </div>
@@ -28,7 +28,7 @@
                 >{{ page.link.text }}</a>
             </div> 
         </div>
-    </nav>
+    </div>
 </template>
 
 <script>
@@ -48,7 +48,7 @@ export default {
 
 /* CONTAINERS */
 
-.menu-container {
+.menu-content-container {
     max-width: 350px;
     min-width: 300px;
     height: 98vh;
@@ -56,13 +56,9 @@ export default {
     border-radius: 25px;
     box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.10);
     margin: 15px auto 15px 15px;
-    position: fixed;
-    z-index: 1001;
-}
-
-.banner-container {
-    position: relative;
-    z-index: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3; /* Increase z-index to overlap banner */
 }
 
 .logo-container {

@@ -1,19 +1,12 @@
 <template>
-    <Menu
-      :pages="pages"
-      :active-page="activePage"
-      :menu-link-click="(index) => activePage = index"
-    ></Menu>
     <PageViewer :page="pages[activePage]"></PageViewer>
 </template>
 
 <script>
-import Menu from './components/Menu.vue';
 import PageViewer from './components/PageViewer.vue';
 
 export default {
     components: {
-        Menu,
         PageViewer
     },
     
