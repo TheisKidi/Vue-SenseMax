@@ -19,9 +19,10 @@ export default {
         Menu,
         PageViewer
     },
+    
     data() {
         return {
-            activePage: 0,
+            activePage: 0,        
             pages: [
                 {
                     link: {text: 'Dashboard', url: 'index.html'},
@@ -44,7 +45,7 @@ export default {
                     pageIcon: 'warningIconVector.svg',
                 }
             ]
-        }
+        };
     }
-}
+};
 </script>
