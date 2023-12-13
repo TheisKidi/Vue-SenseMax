@@ -1,10 +1,10 @@
 <template>
     <div class="critical-area-container">
         <div class="critical-title-container">
-            <h2 class="subtitle">Kritiske områder</h2>
-            <h3 class="subtitle-text">Vis alle</h3>
+            <h2 class="subtitle h2-ticket">Kritiske områder</h2>
+            <h3 class="subtitle-text h3-ticket">Vis alle</h3>
         </div>
-        <a>
+        <a href="#">
             <div class="ticket-container">
                 <div class="ticket-area-container">
                     <img class="ticket-area-icon">
@@ -23,6 +23,10 @@
 
 <style>
 /* FONT STYLING */
+a {
+    text-decoration: none;
+}
+
 h2.subtitle {
     color: #1D1A22;
     font-family: Poppins;
@@ -30,7 +34,10 @@ h2.subtitle {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    width: 75%;
+}
+
+h2.h2-ticket {
+    width: 85%;
 }
 
 h3.subtitle-text {
@@ -40,6 +47,11 @@ h3.subtitle-text {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.h3-ticket {
+    text-align: right;
+    width: 15%;
 }
 
 h4.h4-subtitle {
@@ -63,5 +75,22 @@ h5.h5-text {
 /* CONTAINER STYLE */
 .critical-title-container {
     display: flex;
+    border-bottom: solid 1px #77767A;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
 }
+
+.ticket-container {
+display: flex;
+}
+
+/* CONTENT STYLE */
+.ticket-content {
+    width: 83%;
+}
+
+.arrow-content {
+    height: 60%;
+}
+
 </style>
