@@ -3,14 +3,31 @@
     <div class="page-container">
         <div class="page-title-container">
         <h1 class="page-title">{{ page.pageTitle }}</h1>
+        <div v-if="page.pageTitle == 'Dashboard'">
+            <DashboardComp />
+        </div>
         </div>
     </div>
 </template>
 
 <script>
+import DashboardComp from './DashboardComp.vue';
+
+
 export default {
-    props: ['page'],
-};
+    props: {
+        page: {
+            type: Object,
+            default: (rawProps) => {
+                return {
+                    pageTitle: '',
+                    pageIcon: ''
+                };
+            }
+        }
+    },
+    components: { DashboardComp, DashboardComp }
+}
 </script>
 
 <style>

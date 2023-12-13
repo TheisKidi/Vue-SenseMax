@@ -1,0 +1,20 @@
+[{
+  "link": {"text": "Dashboard", "url": "index.html"},
+  "pageTitle": "Dashboard",
+  "pageIcon": "dashboardIconVector.svg"
+},
+{
+  "link": {"text": "Optælling", "url": "count.html"},
+  "pageTitle": "Optælling",
+  "pageIcon": "amountIconVector.svg"
+},
+{
+  "link": {"text": "Indeklima", "url": "climate.html"},
+  "pageTitle": "Indeklima",
+  "pageIcon": "climateIconVector.svg"
+},
+{
+  "link": {"text": "Advarsler", "url": "warnings.html"},
+  "pageTitle": "Asvarsler",
+  "pageIcon": "warningIconVector.svg"
+}]

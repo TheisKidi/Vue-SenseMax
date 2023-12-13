@@ -2,20 +2,16 @@
   <div class="top-gap warning-box-container">
     <div class="warning-box-content">
       <div class="warning-box-content-top">
-        <img src="../media/Warings.png" />
+        <img src="" />
         <p>Antal advarsler i dag</p>
       </div>
       <div class="warning-box-content-mid">
-        <p>{{ tickets.length }} advarsler</p>
+        <p> advarsler</p>
       </div>
       <div class="warning-box-content-bot">
         <p>Se tidligere advarsler</p>
-        <img src="../media/arrowRightVector 1.png" />
+        <img src="" />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-
-</script>
