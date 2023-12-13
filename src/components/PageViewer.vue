@@ -1,5 +1,4 @@
 <template>
-    <div class="banner-container"></div>
     <div class="page-container">
         <div class="page-title-container">
         <h1 class="page-title">{{ page.pageTitle }}</h1>
