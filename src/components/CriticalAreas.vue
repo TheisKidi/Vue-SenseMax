@@ -4,14 +4,14 @@
             <h2 class="subtitle h2-ticket">Kritiske områder</h2>
             <h3 class="subtitle-text h3-ticket">Vis alle</h3>
         </div>
-        <a href="#">
+        <a v-for="(ticket, index) in tickets" href="#">
             <div class="ticket-container">
                 <div class="ticket-area-container">
                     <img class="ticket-area-content" src="../media/amountIconVector.svg">
                 </div>
                 <div class="ticket-content">
                     <h4 class="h4-subtitle">Udstillings trængsel</h4>
-                    <h5 class="h5-text">Melchior Lock</h5>
+                    <h5 class="h5-text">{{ ticket.ticketId }}</h5>
                 </div>
                 <div class="arrow-container">
                     <img class="arrow-content" src="../media/arrowButton.png">
@@ -86,3 +86,14 @@ h2.h2-ticket {
 }
 
 </style>
+
+<script>
+export default {
+  props: {
+    tickets: Array
+  }
+}
+
+console.log(tickets)
+
+</script>
