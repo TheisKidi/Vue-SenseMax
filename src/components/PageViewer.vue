@@ -15,6 +15,11 @@ export default {
 </script>
 
 <style>
+* {
+    font-family: 'Poppins';
+    margin: 0;
+}
+
 .pag-container {
     width: 78vw;
     margin-left: auto;

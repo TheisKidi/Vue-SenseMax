@@ -1,13 +1,10 @@
 <template>
     <Menu
-        :pages="pages"
-        :active-page="activePage"
-        :menu-link-click="(index) => activePage = index"
+      :pages="pages"
+      :active-page="activePage"
+      :menu-link-click="(index) => activePage = index"
     ></Menu>
-
-    <PageViewer
-        :page="pages[activePage]"
-    ></PageViewer>
+    <PageViewer :page="pages[activePage]"></PageViewer>
 </template>
 
 <script>

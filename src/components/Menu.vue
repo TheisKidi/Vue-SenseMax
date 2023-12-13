@@ -57,7 +57,12 @@ export default {
     box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.10);
     margin: 15px auto 15px 15px;
     position: fixed;
-    z-index: 9999;
+    z-index: 1001;
+}
+
+.banner-container {
+    position: relative;
+    z-index: 0;
 }
 
 .logo-container {
