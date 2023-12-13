@@ -4,7 +4,7 @@
         <div class="page-title-container">
         <h1 class="page-title">{{ page.pageTitle }}</h1>
         <div v-if="page.pageTitle == 'Dashboard'">
-            <DashboardComp />
+            <DashboardComp/>
         </div>
         </div>
     </div>
