@@ -7,7 +7,7 @@
         <a href="#">
             <div class="ticket-container">
                 <div class="ticket-area-container">
-                    <img class="ticket-area-icon">
+                    <img class="ticket-area-content" src="../media/amountIconVector.svg">
                 </div>
                 <div class="ticket-content">
                     <h4 class="h4-subtitle">Udstillings trængsel</h4>
@@ -42,16 +42,47 @@ h2.h2-ticket {
 }
 
 .ticket-container {
-display: flex;
+    display: flex;
+    align-items: center;
+}
+
+.ticket-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    width: 50px;
+    padding: 5px 10px;
+    height: 50px;
 }
 
 /* CONTENT STYLE */
 .ticket-content {
-    width: 83%;
+    width: 85%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .arrow-content {
-    height: 60%;
+    height: 25px;
+}
+
+.arrow-container {
+    width: 15%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-area-content {
+    height: 40px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 </style>
