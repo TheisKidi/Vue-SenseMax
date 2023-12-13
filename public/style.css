@@ -7,7 +7,7 @@
 
 .banner-container {
   background-image: url("../src/media/banner.png");
-  background-color: rgba(75, 31, 31, 0.4);
+  background-color: rgba(93, 25, 25, 0.4);
   background-blend-mode: multiply;
   background-size: cover;
   height: 10vh;
