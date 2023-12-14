@@ -6,12 +6,18 @@
             <div v-if="page.pageTitle == 'Dashboard'">
                 <DashboardComp :tickets="tickets" :convertAreaNameToString="convertAreaNameToString"></DashboardComp>
             </div>
+            <div v-else-if="page.pageTitle == 'Indeklima'">
+                <ClimateViewer
+
+                ></ClimateViewer>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import DashboardComp from './DashboardComp.vue';
+import ClimateViewer from './ClimateViewer.vue';
 
 export default {
     props: {
@@ -30,7 +36,7 @@ export default {
         },
     },
 
-    components: { DashboardComp }
+    components: { DashboardComp, ClimateViewer }
 }
 </script>
 
