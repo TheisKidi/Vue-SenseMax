@@ -96,6 +96,7 @@ h2.h2-ticket {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
+    transition: background-color 0.1s ease-in-out;
 }
 
 .ticket-area-container {
@@ -103,7 +104,6 @@ h2.h2-ticket {
     justify-content: center;
     align-items: center;
     border-radius: 0.625rem;
-    background: #FFF;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     width: 50px;
     padding: 5px 10px;
@@ -129,6 +129,16 @@ h2.h2-ticket {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ticket-container:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
+}
+
+.ticket-container:hover .ticket-area-container {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
 }
 
 .ticket-area-content {
