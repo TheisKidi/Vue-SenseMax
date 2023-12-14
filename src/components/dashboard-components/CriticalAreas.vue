@@ -5,7 +5,7 @@
             <h3 class="subtitle-text h3-ticket">Vis alle</h3>
         </div>
         <div v-if="ticketsWithArtwork.length" v-for="(ticket, index) in ticketsWithArtwork" :key="index">
-            <a href="#">
+            <a @click="selectTicket(ticket.ticketId)">
                 <div class="ticket-container">
                     <div class="ticket-area-container">
                         <img class="ticket-area-content" src="../../media/amountIconVector.svg">
@@ -25,7 +25,7 @@
 
 
 <script>
-import { convertAreaNameToString } from '@/utils/areaUtils'
+import { convertAreaNameToString, selectTicket } from '@/utils/areaUtils'
 
 const URL = "https://sensemaxrest.azurewebsites.net/api";
 
@@ -45,6 +45,7 @@ export default {
     },
     methods: {
         convertAreaNameToString,
+        selectTicket,
         async fetchTicketsAndArtworks() {
             try {
                 // Hent tickets

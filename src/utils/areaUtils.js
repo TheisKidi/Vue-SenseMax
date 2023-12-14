@@ -13,11 +13,8 @@ export const convertAreaNameToString = (area) => {
   }
 };
 
-export const fetchArtwork = async (artworkNum) => {
-  try {
-    const response = await axios.get(`${URL}/artworks/${artworkNum}`);
-    return await response.data;
-  } catch (ex) {
-    alert(ex.message);
-  }
+export const selectTicket = (id) => {
+  console.log(id);
+
+  return id;
 };
