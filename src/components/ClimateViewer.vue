@@ -12,6 +12,9 @@
               <p class="artwork-text-content">Aktuelle fugtighed: {{ artwork.actualHumidity.toFixed(2) }} %</p>
             </div>
           </div>
+          <div class="arrow-container2">
+            <img class="arrow-content" src="../media/arrowButton.png">
+          </div>
         </a>
       </div>
       <div class="climate-grid-right">
@@ -72,14 +75,19 @@ export default {
 }
 
 .artwork-container {
-  margin-top: 35px;
+  margin-top: 25px;
   display: flex;
   cursor: pointer; /* Add cursor style for clickable items */
 }
 
+.artwork-container:hover {
+    background: #f5f5f5;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
 .artwork-icon-container {
     border-radius: 0.625rem;
-    background: #FFF;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center; 
@@ -89,8 +97,24 @@ export default {
     min-width: 70px;
 }
 
+.artwork-container:not(:hover) .artwork-icon-container {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.artwork-container:hover .artwork-icon-container {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
+}
+
 .artwork-info-container {
     margin-left: 25px;
+}
+
+.arrow-container2 {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 /* CONTENT STYLING */
