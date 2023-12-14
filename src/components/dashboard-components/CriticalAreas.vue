@@ -4,7 +4,7 @@
             <h2 class="subtitle h2-ticket">Kritiske områder</h2>
             <h3 class="subtitle-text h3-ticket">Vis alle</h3>
         </div>
-        <div v-if="(tickets.length)" v-for="(ticket, index) in tickets">
+        <div v-if="ticketsWithArtwork.length" v-for="(ticket, index) in ticketsWithArtwork" :key="index">
             <a href="#">
                 <div class="ticket-container">
                     <div class="ticket-area-container">
@@ -12,7 +12,7 @@
                     </div>
                     <div class="ticket-content">
                         <h4 class="h4-subtitle">{{ convertAreaNameToString(ticket.ticketArea) }}</h4>
-                        <h5 class="h5-text">{{ getartwor }}</h5>
+                        <h5 class="h5-text">{{ ticket.artworkName }}</h5>
                     </div>
                     <div class="arrow-container">
                         <img class="arrow-content" src="../../media/arrowButton.png">
@@ -25,22 +25,48 @@
 
 
 <script>
-import { convertAreaNameToString, fetchArtwork } from '@/utils/areaUtils'
+import { convertAreaNameToString } from '@/utils/areaUtils'
 
 const URL = "https://sensemaxrest.azurewebsites.net/api";
 
 export default {
     data() {
         return {
-            artworks: {} // Use an object to store artworks keyed by artworkNum
+            artworks: [],
+            tickets: [],
+            ticketsWithArtwork: []
         }
+    },
+    mounted() {
+        this.fetchTicketsAndArtworks()
     },
     props: {
         tickets: Array,
     },
     methods: {
         convertAreaNameToString,
-        fetchArtwork,
+        async fetchTicketsAndArtworks() {
+            try {
+                // Hent tickets
+                let ticketsResponse = await fetch(`${URL}/ticket`);
+                let tickets = await ticketsResponse.json();
+
+                // Hent artworks
+                let artworksResponse = await fetch(`${URL}/artworks`);
+                let artworks = await artworksResponse.json();
+
+                // Kombiner tickets og artworks
+                this.ticketsWithArtwork = tickets.map(ticket => {
+                    let artwork = artworks.find(art => art.artworkId === ticket.artworkInvolved);
+                    return {
+                        ...ticket,
+                        artworkName: artwork ? artwork.artworkName : 'Ukendt'
+                    };
+                });
+            } catch (err) {
+                console.error("Fejl ved hentning af data: ", err);
+            }
+        }
     }
 }
 
