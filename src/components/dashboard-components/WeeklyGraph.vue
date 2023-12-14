@@ -42,6 +42,7 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 16.5px;
+  justify-content: space-evenly;
 }
 
 .bar-wrapper {
